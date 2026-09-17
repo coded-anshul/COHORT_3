@@ -8,10 +8,10 @@ html, body{
     height: 100%;
     width: 100%;
 }
-main{
+/* main{
     height: 100%;
     width: 100%;
-    background-color: #000000;
+    background-color: #000000; */
     /* display: grid;
     grid-template-rows: 100px calc(100% - 200px) 100px;
     grid-template-columns: 20% 80%; */
@@ -21,7 +21,7 @@ main{
     grid-template-rows: repeat(2,20%) 60% ; */
     /* grid-template-columns:  20% minmax(10%,30%) 50%;
     grid-template-rows: 50% 50%; */
-    display: grid;
+    /* display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 100px calc(100% - 200px) 100px;
     grid-template-areas: 
@@ -29,9 +29,8 @@ main{
     "aside section"
     "footer footer"
     ;
-    gap: 20px;
-}
-.box{
+    gap: 20px; }*/
+/* .box{
     border: 2px solid #ffffff;
     background-color: pink;
 }
@@ -52,4 +51,74 @@ section{
 footer{
     grid-area: footer;
     background-color: rgb(67, 226, 27);
+} */
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 22% 20% 7% 27% 22%;
+    grid-template-rows: 29% 26% 7% 18% 20%;
+
+    grid-template-areas: 
+    "left-top top-center1 top-center1 top-center2 right-top"
+    "left-top center center center right-top"
+    "left-bottom center center center right-top"
+    "left-bottom center center center right-bottom"
+    "left-bottom bottom-center1 bottom-center2 bottom-center2 right-bottom"
+    ;
+}
+.left-top{
+    grid-area:left-top;
+    background-color: royalblue;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.left-bottom{
+    grid-area:left-bottom;
+    background-color:crimson ;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.right-top{
+    grid-area:right-top;
+    background-color: palevioletred;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.right-bottom{
+    grid-area:right-bottom;
+    background-color: lightseagreen;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.center{
+    grid-area:center;
+    background-color: tan;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.top-center1{
+    grid-area:top-center1;
+    background-color: lavender;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.top-center2{
+    grid-area: top-center2;
+    background-color: blanchedalmond;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.bottom-center1{
+    grid-area: bottom-center1;
+    background-color: coral;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.bottom-center2{
+    grid-area: bottom-center2;
+    background-color: mediumpurple;
+    border: 2px solid white;
+    border-radius: 20px;
 }
