@@ -13,8 +13,10 @@ main{
     width: 100%;
     background-color: #000000;
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: repeat(2,20%) 60% ;
+    /* grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(2,20%) 60% ; */
+    grid-template-columns:  20% minmax(10%,30%) 50%;
+    grid-template-rows: 50% 50%;
     
 }
 .box{
