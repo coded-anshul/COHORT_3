@@ -14,7 +14,7 @@ main{
     background-color: #000000;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 20% 20% 60% ;
+    grid-template-rows: repeat(2,20%) 60% ;
     
 }
 .box{
