@@ -11,6 +11,7 @@ rem - 1rem=16px
 ch- character width 
 ex - character height
 fr - fraction
+max width - min width - use karne ke liye display:inline-block dena padta hai taki poori width ya height na lekr sirf font jitta bada hai utti hi le 
 
 min 
 max
