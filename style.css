@@ -141,5 +141,5 @@ h1{
     display: inline-block;
     background-color: red;
 
-    min-width: 50%;
+    max-width: 50%;
 }
