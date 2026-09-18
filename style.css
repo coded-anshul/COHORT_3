@@ -52,7 +52,7 @@ footer{
     grid-area: footer;
     background-color: rgb(67, 226, 27);
 } */
-main{
+/* main{
     height: 100%;
     width: 100%;
     background-color: black;
@@ -122,4 +122,16 @@ main{
     background-color: mediumpurple;
     border: 2px solid white;
     border-radius: 20px;
+} */
+
+.parent{
+    background-color: black;
+    min-height: 100%;
+    width: 100%;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border: 2px solid white ;
 }
