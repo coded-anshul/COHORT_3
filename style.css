@@ -150,6 +150,12 @@ footer{
     background-color: royalblue;
     position: absolute;
     animation: moving 2s ease-in-out ;
+
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    
 }
 
 
