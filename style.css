@@ -136,10 +136,25 @@ footer{
     border: 2px solid white ;
 } */
 
-h1{
+/* h1{
     font-size: 80px;
     display: inline-block;
     background-color: red;
 
     max-width: 50%;
+} */
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: royalblue;
+}
+
+@media (max-width:300.16px){
+    .box{
+        background-color: rgb(224, 15, 4);
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+    }
 }
