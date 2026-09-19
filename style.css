@@ -196,7 +196,7 @@ footer{
         background-color: red;
     }
 } */
- h1{
+ /* h1{
     color: red;
 
  }
@@ -205,4 +205,15 @@ footer{
  }
  h1::before{
     content: "hi";
- }
+ } */
+
+ /* .box{
+    height: 200px;
+    width: 200px;
+    background-color: royalblue;
+ } */
+ /* iske upar after ya before lagaoge toh uske andr hi ayega naki uske aage piche */
+:root{
+    --king:red;
+    --queen:pink;
+}
