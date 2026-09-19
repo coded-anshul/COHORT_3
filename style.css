@@ -144,7 +144,7 @@ footer{
     max-width: 50%;
 } */
 
-.box{
+/* .box{
     height: 200px;
     width: 200px;
     background-color: royalblue;
@@ -155,9 +155,12 @@ footer{
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-    
-}
 
+}
+.box:hover{
+    animation-play-state: paused;
+    
+} */
 
 @keyframes moving {
     0%{
@@ -193,3 +196,13 @@ footer{
         background-color: red;
     }
 } */
+ h1{
+    color: red;
+
+ }
+ h1::after{
+    content: "1";
+ }
+ h1::before{
+    content: "hi";
+ }
