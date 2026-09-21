@@ -22,3 +22,20 @@
 
 // // -non premitive
 
+// type coercion
+// -implicit
+// -explicit
+
+var a = '10'
+ var b = 20
+
+ console.log(a*b);
+
+
+ var c = 'ashu';
+ var d = Number(c);
+
+ console.log(d);
+
+
+ 
