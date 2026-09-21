@@ -53,4 +53,21 @@
 //     console.log('Fail');
 // }
 
-console.log(10>9?'hello':'bye');
+// console.log(10>9?'hello':'bye');
+
+let day = prompt('enter the day')
+
+switch (day) {
+    case "Monday":
+        console.log("Start of the week");
+        break;
+    case "Friday":
+        console.log("Weekend coming!");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("It's the weekend!");
+        break;
+    default:
+        console.log("Midweek day");
+}
