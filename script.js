@@ -37,18 +37,20 @@
 
 //  console.log(d);
 
-var marks = 100;
+// var marks = 100;
 
 
-if (marks >= 85) {
-    console.log('A+');
-} else if (marks >= 70) {
-    console.log('B+');
-} else if (marks >= 50) {
-    console.log('C+');
-}
-else if (marks >= 33) {
-    console.log('D');
-} else {
-    console.log('Fail');
-}
+// if (marks >= 85) {
+//     console.log('A+');
+// } else if (marks >= 70) {
+//     console.log('B+');
+// } else if (marks >= 50) {
+//     console.log('C+');
+// }
+// else if (marks >= 33) {
+//     console.log('D');
+// } else {
+//     console.log('Fail');
+// }
+
+console.log(10>9?'hello':'bye');
