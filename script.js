@@ -26,16 +26,29 @@
 // -implicit
 // -explicit
 
-var a = '10'
- var b = 20
+// var a = '10'
+//  var b = 20
 
- console.log(a*b);
-
-
- var c = 'ashu';
- var d = Number(c);
-
- console.log(d);
+//  console.log(a*b);
 
 
- 
+//  var c = 'ashu';
+//  var d = Number(c);
+
+//  console.log(d);
+
+var marks = 100;
+
+
+if (marks >= 85) {
+    console.log('A+');
+} else if (marks >= 70) {
+    console.log('B+');
+} else if (marks >= 50) {
+    console.log('C+');
+}
+else if (marks >= 33) {
+    console.log('D');
+} else {
+    console.log('Fail');
+}
