@@ -55,19 +55,28 @@
 
 // console.log(10>9?'hello':'bye');
 
-let day = prompt('enter the day')
+// let day = prompt('enter the day')
 
-switch (day) {
-    case "Monday":
-        console.log("Start of the week");
-        break;
-    case "Friday":
-        console.log("Weekend coming!");
-        break;
-    case "Saturday":
-    case "Sunday":
-        console.log("It's the weekend!");
-        break;
-    default:
-        console.log("Midweek day");
-}
+// switch (day) {
+//     case "Monday":
+//         console.log("Start of the week");
+//         break;
+//     case "Friday":
+//         console.log("Weekend coming!");
+//         break;
+//     case "Saturday":
+//     case "Sunday":
+//         console.log("It's the weekend!");
+//         break;
+//     default:
+//         console.log("Midweek day");
+// }
+
+
+// console.log("if ke pehle ");
+// if (10>5){
+//     console.log("if is running");
+// }
+// console.log("if ke baad mai ");
+
+//loops
