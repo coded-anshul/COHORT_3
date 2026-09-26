@@ -131,4 +131,4 @@ function calculateArea(length, breadth) {
 
 console.log(calculateArea(5, 3));   
 console.log(calculateArea(10, 4)); 
-console.log(calculateArea(7, 2));  
+console.log(calculateArea(7, 2));  //functions
