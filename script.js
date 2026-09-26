@@ -79,4 +79,11 @@
 // }
 // console.log("if ke baad mai ");
 
-//loops
+var num = prompt("enter the number");
+var a = 0;
+while (a<num){
+    if(a%2==0){
+    console.log(a);
+    }
+    a++;
+}
