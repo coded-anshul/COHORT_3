@@ -79,11 +79,9 @@
 // }
 // console.log("if ke baad mai ");
 
-var num = prompt("enter the number");
-var a = 0;
-while (a<num){
-    if(a%2==0){
-    console.log(a);
-    }
+var num = Number(prompt("enter the number"));
+var a  = 1;
+while(a<=10){
+    console.log(num*a)
     a++;
 }
