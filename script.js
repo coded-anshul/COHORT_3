@@ -79,9 +79,16 @@
 // }
 // console.log("if ke baad mai ");
 
-var num = Number(prompt("enter the number"));
-var a  = 1;
-while(a<=10){
-    console.log(num*a)
-    a++;
-}
+// var num = Number(prompt("enter the number"));
+// var a  = 1;
+// while(a<=10){
+//     console.log(num*a)
+//     a++;
+// }
+
+do{
+    var pass= prompt("enter the password");
+
+}while(pass!='123');
+
+console.log("welcome!   ")
