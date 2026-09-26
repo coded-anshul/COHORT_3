@@ -86,9 +86,14 @@
 //     a++;
 // }
 
-do{
-    var pass= prompt("enter the password");
+// do{
+//     var pass= prompt("enter the password");
 
-}while(pass!='123');
+// }while(pass!='123');
 
-console.log("welcome!   ")
+// console.log("welcome!   ")
+
+var name = "jay"
+var gender = "male"
+
+console.log(`hero ka naam ${name} hai aur gender ${gender} hai`);
