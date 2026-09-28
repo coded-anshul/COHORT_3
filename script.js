@@ -172,7 +172,11 @@
 // a();
 // b();
 
-var a = ()=>{
-    console.log("hello guys ");
-}
-a();
+// var a = ()=>{
+//     console.log("hello guys ");
+// }
+// a();
+
+(function(){
+    console.log("this is IIFE");
+})()
