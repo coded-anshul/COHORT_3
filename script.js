@@ -152,13 +152,22 @@
 // mul(10,20);
 // sub(10,20); 
 
-function greet (user,age){
-    console.log("good morning ", user);
-    if (age >=18){
-        console.log("YOU ARE WELCOME");
-    }else{
-        console.log("get the fuck outta here");
-    }
+// function greet (user,age){
+//     console.log("good morning ", user);
+//     if (age >=18){
+//         console.log("YOU ARE WELCOME");
+//     }else{
+//         console.log("get the fuck outta here");
+//     }
+// }
+
+// greet("deepak",15);
+var a = function(){
+    console.log("hello guys1");
 }
 
-greet("deepak",15);
+var b = function(){
+    console.log("hello guys 2");
+}
+a();
+b();
