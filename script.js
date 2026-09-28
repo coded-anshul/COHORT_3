@@ -162,12 +162,17 @@
 // }
 
 // greet("deepak",15);
-var a = function(){
-    console.log("hello guys1");
-}
+// var a = function(){
+//     console.log("hello guys1");
+// }
 
-var b = function(){
-    console.log("hello guys 2");
+// var b = function(){
+//     console.log("hello guys 2");
+// }
+// a();
+// b();
+
+var a = ()=>{
+    console.log("hello guys ");
 }
 a();
-b();
