@@ -125,10 +125,40 @@
 //     console.log(i);
 // }
 
-function calculateArea(length, breadth) {
-    return length * breadth;
+// function calculateArea(length, breadth) {
+//     return length * breadth;
+// }
+
+// console.log(calculateArea(5, 3));   
+// console.log(calculateArea(10, 4)); 
+// console.log(calculateArea(7, 2));     
+
+// function greet (num){
+//     console.log("good evening",num);
+// }
+
+
+
+// function add (a,b){
+//     console.log(a+b);
+// }
+// function mul (a,b){
+//     console.log(a*b);
+// }
+// function sub (a,b){
+//     console.log(a-b);
+// }
+// add(10,20);
+// mul(10,20);
+// sub(10,20); 
+
+function greet (user,age){
+    console.log("good morning ", user);
+    if (age >=18){
+        console.log("YOU ARE WELCOME");
+    }else{
+        console.log("get the fuck outta here");
+    }
 }
 
-console.log(calculateArea(5, 3));   
-console.log(calculateArea(10, 4)); 
-console.log(calculateArea(7, 2));  //functions
+greet("deepak",15);
