@@ -177,6 +177,8 @@
 // }
 // a();
 
-(function(){
-    console.log("this is IIFE");
-})()
+// (function(){
+//     console.log("this is IIFE");
+// })()
+
+//check
