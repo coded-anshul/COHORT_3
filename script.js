@@ -232,11 +232,20 @@
 //     console.log(value);
 // }
 
-var arr = [];
+// var arr = [];
 
-for (var a = 1; a<=100 ; a++){
-    if(a%2==0){
-        arr.push(a);
-    }
-}
-console.log(arr);
+// for (var a = 1; a<=100 ; a++){
+//     if(a%2==0){
+//         arr.push(a);
+//     }
+// }
+// console.log(arr);
+
+  let arr = [1, 2, 3, 4, 5];
+
+arr.slice(1, 4);              // [2, 3, 4]  (original unchanged)
+arr.concat([6, 7]);           // [1, 2, 3, 4, 5, 6, 7]
+arr.includes(3);              // true
+arr.indexOf(3);               // 2
+arr.indexOf(99);              // -1 (not found)
+arr.join("-");                // "1-2-3-4-5"
