@@ -227,7 +227,16 @@
 // for (var a = 0; a<(arr.length);a++){
 //     console.log(a);
 // }
-var arr = [1,2,3,4]
-for (value of arr){
-    console.log(value);
+// var arr = [1,2,3,4]
+// for (value of arr){
+//     console.log(value);
+// }
+
+var arr = [];
+
+for (var a = 1; a<=100 ; a++){
+    if(a%2==0){
+        arr.push(a);
+    }
 }
+console.log(arr);
