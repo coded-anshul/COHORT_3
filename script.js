@@ -222,8 +222,12 @@
 
 // arr.sort((a,b)=>a-b);  //used in more than 2 digit cz of sort treats elemst as string
 
-var arr = [1,2,3,4];
+// var arr = [1,2,3,4];
 
-for (var a = 0; a<(arr.length);a++){
-    console.log(a);
+// for (var a = 0; a<(arr.length);a++){
+//     console.log(a);
+// }
+var arr = [1,2,3,4]
+for (value of arr){
+    console.log(value);
 }
