@@ -207,9 +207,23 @@
 // arr.splice(2,3,10);
 // console.log(arr);
 
-var arr =[
-    [1,2,3,4,5],
-    [10,20,30,40,50],
-    [100,200,300,400,500]
-]
-console.log(arr);
+// var arr =[
+//     [1,2,3,4,5],
+//     [10,20,30,40,50],
+//     [100,200,300,400,500]
+// ]
+// console.log(arr);
+
+// arr.reverse();
+// console.log(arr);
+
+// arr.sort();
+// console.log(arr);
+
+// arr.sort((a,b)=>a-b);  //used in more than 2 digit cz of sort treats elemst as string
+
+var arr = [1,2,3,4];
+
+for (var a = 0; a<(arr.length);a++){
+    console.log(a);
+}
