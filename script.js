@@ -184,16 +184,25 @@
 //check
 
 
-arr = [1,2,3,4]
+// arr = [1,2,3,4]
 
-arr.push(5)       //last mai elemet add
+// arr.push(5)       //last mai elemet add
+// console.log(arr);
+
+// arr.pop()           //last se remove
+// console.log(arr);
+
+// arr.unshift(1)          // st se add
+// console.log(arr);
+
+// arr.shift()          //st se remove
+// console.log(arr);
+
+
+var arr = [1,2,3,4,5];
+
+arr.splice(0,0);
 console.log(arr);
 
-arr.pop()           //last se remove
-console.log(arr);
-
-arr.unshift(1)          // st se add
-console.log(arr);
-
-arr.shift()          //st se remove
+arr.splice(2,3,10);
 console.log(arr);
