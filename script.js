@@ -330,14 +330,19 @@
 // },0);
 
 // console.log(sum);
- var arr = [1,2,3,4,5,6]
+//  var arr = [1,2,3,4,5,6]
 
- var ans = arr.reduce(function(acc,val){
-  if(val>acc){
-    return val;
-  }else{
-    return acc;
-  }
- },0)
+//  var ans = arr.reduce(function(acc,val){
+//   if(val>acc){
+//     return val;
+//   }else{
+//     return acc;
+//   }
+//  },0)
 
- console.log(ans); 
+//  console.log(ans); 
+
+var arr = [ 2,3,2,4,5,65,200,72]
+
+var ans = arr.findIndex(a=>a%10==0);
+console.log(ans);
