@@ -241,11 +241,33 @@
 // }
 // console.log(arr);
 
-  let arr = [1, 2, 3, 4, 5];
+//   let arr = [1, 2, 3, 4, 5];
 
-arr.slice(1, 4);              // [2, 3, 4]  (original unchanged)
-arr.concat([6, 7]);           // [1, 2, 3, 4, 5, 6, 7]
-arr.includes(3);              // true
-arr.indexOf(3);               // 2
-arr.indexOf(99);              // -1 (not found)
-arr.join("-");                // "1-2-3-4-5"
+// arr.slice(1, 4);              // [2, 3, 4]  (original unchanged)
+// arr.concat([6, 7]);           // [1, 2, 3, 4, 5, 6, 7]
+// arr.includes(3);              // true
+// arr.indexOf(3);               // 2
+// arr.indexOf(99);              // -1 (not found)
+// arr.join("-");                // "1-2-3-4-5"
+
+
+
+//forEach - iteration
+//map - transform 
+//filter - filter
+// reduce - reduce
+
+var arr = [1,3,4,5]
+
+// arr.forEach(function(){
+//   console.log('hello');
+// })
+
+
+// let run = () => {
+//   console.log("hello");
+// }
+// arr.forEach(run);
+
+
+
