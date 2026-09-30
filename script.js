@@ -257,7 +257,7 @@
 //filter - filter
 // reduce - reduce
 
-var arr = [1,3,4,5]
+// var arr = [1,3,4,5]
 
 // arr.forEach(function(){
 //   console.log('hello');
@@ -269,5 +269,8 @@ var arr = [1,3,4,5]
 // }
 // arr.forEach(run);
 
+var arr = [1,3,4,5]
 
-
+arr.forEach(function(ele,ind){
+  console.log(ele,ind);
+ })
