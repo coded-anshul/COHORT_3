@@ -296,3 +296,11 @@ var arr = [1,3,4,5]
 
 // })
 // console.log(arr2);
+
+var arr = [1,2,3,4,-2]
+
+var arr2 = arr.filter(function(elem){
+  return elem>0;
+})
+
+console.log (arr2);
