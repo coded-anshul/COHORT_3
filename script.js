@@ -271,6 +271,12 @@
 
 var arr = [1,3,4,5]
 
-arr.forEach(function(ele,ind){
-  console.log(ele,ind);
- })
+// arr.forEach(function(ele,ind){
+//   console.log(ele,ind);
+//  })
+// var a = 0 ;
+// arr.forEach(function(elem){
+  
+//   a = a + elem;
+// })
+// console.log(a);
