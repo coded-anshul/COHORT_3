@@ -269,7 +269,7 @@
 // }
 // arr.forEach(run);
 
-var arr = [1,3,4,5]
+// var arr = [1,3,4,5]
 
 // arr.forEach(function(ele,ind){
 //   console.log(ele,ind);
@@ -297,10 +297,36 @@ var arr = [1,3,4,5]
 // })
 // console.log(arr2);
 
-var arr = [1,2,3,4,-2]
+// var arr = [1,2,3,4,-2]
 
-var arr2 = arr.filter(function(elem){
-  return elem>0;
-})
+// var arr2 = arr.filter(function(elem){
+//   return elem>0;
+// })
 
-console.log (arr2);
+// console.log (arr2);
+
+// var arr = [100,200,300]
+
+// var sum = arr.reduce(function(acc,val){
+//   return acc + val
+// })
+// console.log(sum);
+
+
+// var arr = ['apple','banana','apple','mango']
+
+// var abc = arr.reduce((acc,val)=>{
+//   acc[val] = (acc[val] || 0) + 1;
+
+//   return acc
+// },{})
+//   console.log(abc);
+
+
+var arr = [1,2,3,4,5,6]
+var sum = 0
+arr.reduce(function(acc,val){
+  sum = sum + val;
+},0);
+
+console.log(sum);
