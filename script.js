@@ -280,3 +280,19 @@ var arr = [1,3,4,5]
 //   a = a + elem;
 // })
 // console.log(a);
+
+
+// var squ = [ ];
+// arr.forEach(function(elem){
+//   squ.push(elem*elem);
+
+// })
+// console.log(squ);
+
+
+
+// var arr2 = arr.map(function(elem){
+//   return elem*elem;
+
+// })
+// console.log(arr2);
