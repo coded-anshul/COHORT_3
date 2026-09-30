@@ -342,7 +342,13 @@
 
 //  console.log(ans); 
 
-var arr = [ 2,3,2,4,5,65,200,72]
+// var arr = [ 2,3,2,4,5,65,200,72]
 
-var ans = arr.findIndex(a=>a%10==0);
-console.log(ans);
+// var ans = arr.findIndex(a=>a%10==0);
+// console.log(ans);
+
+var arr = ['ansh','kinj','pranj']
+
+var a = arr.find(a=>a.includes('a'))
+
+console.log(a);
