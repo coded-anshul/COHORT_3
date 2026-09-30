@@ -323,10 +323,21 @@
 //   console.log(abc);
 
 
-var arr = [1,2,3,4,5,6]
-var sum = 0
-arr.reduce(function(acc,val){
-  sum = sum + val;
-},0);
+// var arr = [1,2,3,4,5,6]
+// var sum = 0
+// arr.reduce(function(acc,val){
+//   sum = sum + val;
+// },0);
 
-console.log(sum);
+// console.log(sum);
+ var arr = [1,2,3,4,5,6]
+
+ var ans = arr.reduce(function(acc,val){
+  if(val>acc){
+    return val;
+  }else{
+    return acc;
+  }
+ },0)
+
+ console.log(ans); 
