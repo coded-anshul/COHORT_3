@@ -388,22 +388,33 @@
 // console.log(c);
 
 
-var maths ={
-    add:(a,b)=>{
-        return a+b;
-    },
-    cube:(a)=>{
-        return a*a*a;
-    },
-    square:(a)=>{
-        return a*a;
-    },
-    multiply:(a,b)=>{
-        return a*b;
-    },
-}
+// var maths ={
+//     add:(a,b)=>{
+//         return a+b;
+//     },
+//     cube:(a)=>{
+//         return a*a*a;
+//     },
+//     square:(a)=>{
+//         return a*a;
+//     },
+//     multiply:(a,b)=>{
+//         return a*b;
+//     },
+// }
 
-console.log(maths.add(10,20));
-console.log(maths.cube(10));
-console.log(maths.square(10));
-console.log(maths.multiply(10,20));
+// console.log(maths.add(10,20));
+// console.log(maths.cube(10));
+// console.log(maths.square(10));
+// console.log(maths.multiply(10,20));
+
+
+// const person = {
+//     name: 'John',
+//     age: 30,
+//     city: 'New York',
+// }
+
+
+// object.seal(person);
+// object.freeze(person);
