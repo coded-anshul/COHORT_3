@@ -361,17 +361,28 @@
 // console.log(a.name);
 // console.log(a.age); 
 
+// var a = {
+//     name : 'ashu',
+//     age : 20,
+//     city : 'delhi'
+// }
+
+// console.log(a.name);
+
+
+// a.marks = 100;
+// console.log(a);
+
+// delete a.age;
+// console.log(a);
+
 var a = {
     name : 'ashu',
     age : 20,
     city : 'delhi'
 }
 
-console.log(a.name);
-
-
-a.marks = 100;
-console.log(a);
-
-delete a.age;
-console.log(a);
+var b = Object.keys(a);
+console.log(b);
+var c = Object.values(a);
+console.log(c);
