@@ -347,8 +347,16 @@
 // var ans = arr.findIndex(a=>a%10==0);
 // console.log(ans);
 
-var arr = ['ansh','kinj','pranj']
+// var arr = ['ansh','kinj','pranj']
 
-var a = arr.find(a=>a.includes('a'))
+// var a = arr.find(a=>a.includes('a'))
 
-console.log(a);
+// console.log(a);
+
+var a = {
+    name : 'ashu',
+    age : 20,
+    city : 'delhi'
+}
+console.log(a.name);
+console.log(a.age); 
