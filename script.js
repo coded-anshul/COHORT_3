@@ -376,13 +376,34 @@
 // delete a.age;
 // console.log(a);
 
-var a = {
-    name : 'ashu',
-    age : 20,
-    city : 'delhi'
+// var a = {
+//     name : 'ashu',
+//     age : 20,
+//     city : 'delhi'
+// }
+
+// var b = Object.keys(a);
+// console.log(b);
+// var c = Object.values(a);
+// console.log(c);
+
+
+var maths ={
+    add:(a,b)=>{
+        return a+b;
+    },
+    cube:(a)=>{
+        return a*a*a;
+    },
+    square:(a)=>{
+        return a*a;
+    },
+    multiply:(a,b)=>{
+        return a*b;
+    },
 }
 
-var b = Object.keys(a);
-console.log(b);
-var c = Object.values(a);
-console.log(c);
+console.log(maths.add(10,20));
+console.log(maths.cube(10));
+console.log(maths.square(10));
+console.log(maths.multiply(10,20));
