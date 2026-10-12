@@ -478,33 +478,61 @@
 // jab arrow function ke andar this use karte hai to this ka reference parent object ko point karta hai na ki current object ko
 //jab normal function ke andar this use karte hai to this ka reference current object ko point karta hai na ki parent object ko
 
+// var student1 = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+// }
+// var student2 = {
+//     firstName: 'Jane',
+//     lastName: 'Smith',
+//     // getIntro:function() {
+//         //     console.log(this.firstName + ' ' + this.lastName);
+//         // }
+// }
+// var getIntro=function() {
+//      console.log(this.firstName + ' ' + this.lastName);
+// }
+
+// // student1.getIntro.call(student2); // Output: Jane Smith
+// // // The call() method allows us to invoke the getIntro method of student1, but with the context of student2.
+// // student1.getIntro.apply(student2); // Output: Jane Smith
+// // // The apply() method works similarly to call(), but it takes an array of arguments instead of individual arguments.
+// // student1.getIntro.bind(student2)(); // Output: Jane Smith
+// // // The bind() method creates a new function with the context of student2, which we can then invoke.
+
+// getIntro.call(student1); // Output: John Doe
+// getIntro.call(student2); // Output: Jane Smith
+
+// getIntro.apply(student1); // Output: John Doe
+// getIntro.apply(student2); // Output: Jane Smith
+
+// getIntro.bind(student1)(); // Output: John Doe
+// getIntro.bind(student2)(); // Output: Jane Smith
+
+
 var student1 = {
     firstName: 'John',
     lastName: 'Doe',
+    maths: 90,
+    computer: 85,
 }
 var student2 = {
     firstName: 'Jane',
     lastName: 'Smith',
-    // getIntro:function() {
-        //     console.log(this.firstName + ' ' + this.lastName);
-        // }
+    maths: 88,
+    computer: 92,
 }
-var getIntro=function() {
-     console.log(this.firstName + ' ' + this.lastName);
+var student3 = {
+    firstName: 'Alice',
+    lastName: 'Johnson',
+    maths: 95,
+    computer: 80,
 }
 
-// student1.getIntro.call(student2); // Output: Jane Smith
-// // The call() method allows us to invoke the getIntro method of student1, but with the context of student2.
-// student1.getIntro.apply(student2); // Output: Jane Smith
-// // The apply() method works similarly to call(), but it takes an array of arguments instead of individual arguments.
-// student1.getIntro.bind(student2)(); // Output: Jane Smith
-// // The bind() method creates a new function with the context of student2, which we can then invoke.
+var getResults = function(){
+    console.log(this.firstName + ' ' + this.lastName + ' scored ' + this.maths + ' in Maths and ' + this.computer + ' in Computer.');
+}
 
-getIntro.call(student1); // Output: John Doe
-getIntro.call(student2); // Output: Jane Smith
-
-getIntro.apply(student1); // Output: John Doe
-getIntro.apply(student2); // Output: Jane Smith
-
-getIntro.bind(student1)(); // Output: John Doe
-getIntro.bind(student2)(); // Output: Jane Smith
+getResults.call(student1); // Output: John Doe scored 90 in Maths and 85 in Computer.
+getResults.call(student2);
+getResults.call(student3);
