@@ -510,29 +510,49 @@
 // getIntro.bind(student2)(); // Output: Jane Smith
 
 
-var student1 = {
+// var student1 = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     maths: 90,
+//     computer: 85,
+// }
+// var student2 = {
+//     firstName: 'Jane',
+//     lastName: 'Smith',
+//     maths: 88,
+//     computer: 92,
+// }
+// var student3 = {
+//     firstName: 'Alice',
+//     lastName: 'Johnson',
+//     maths: 95,
+//     computer: 80,
+// }
+
+// var getResults = function(){
+//     console.log(this.firstName + ' ' + this.lastName + ' scored ' + this.maths + ' in Maths and ' + this.computer + ' in Computer.');
+// }
+
+// getResults.call(student1); // Output: John Doe scored 90 in Maths and 85 in Computer.
+// getResults.call(student2);
+// getResults.call(student3);
+
+
+ var student1 = {
     firstName: 'John',
     lastName: 'Doe',
-    maths: 90,
-    computer: 85,
-}
-var student2 = {
-    firstName: 'Jane',
+
+    getIntro: function(city) {
+        console.log(this.firstName + ' ' + this.lastName + ' ' + city);
+ }}
+
+  var student2 = {
+    firstName: 'jane',
     lastName: 'Smith',
-    maths: 88,
-    computer: 92,
-}
-var student3 = {
+ }
+ var student3 = {
     firstName: 'Alice',
     lastName: 'Johnson',
-    maths: 95,
-    computer: 80,
-}
+ }
 
-var getResults = function(){
-    console.log(this.firstName + ' ' + this.lastName + ' scored ' + this.maths + ' in Maths and ' + this.computer + ' in Computer.');
-}
-
-getResults.call(student1); // Output: John Doe scored 90 in Maths and 85 in Computer.
-getResults.call(student2);
-getResults.call(student3);
+ student1.getIntro.call(student2,'delhi'); // Output: John Doe scored 90 in Maths and 85 in Computer.
