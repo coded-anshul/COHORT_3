@@ -438,22 +438,42 @@
 // // New way
 // let [x, y, z] = arr;
 // console.log(x, y, z);   
-var obj = {
-    name: 'John',
-    age: 30,
-    city: 'New York',
-    sayhi:function(){
-        console.log(this);
-    }
-}
-obj.sayhi();
+// var obj = {
+//     name: 'John',
+//     age: 30,
+//     city: 'New York',
+//     sayhi:function(){
+//         console.log(this);
+//     }
+// }
+// obj.sayhi();
+
+// var obj = {
+//     name: 'John',
+//     age: 30,
+//     city: 'New York',
+//     sayhi:()=>{
+//         console.log(this);
+//     }
+// }
+// obj.sayhi();
 
 var obj = {
     name: 'John',
     age: 30,
-    city: 'New York',
-    sayhi:()=>{
-        console.log(this);
+    getCompany: function() {
+        const companyName={
+            name: 'TechCorp',
+            isGood: true,
+            greet: function() {
+                console.log(this.name);
+            }
+        };
+        companyName.greet();
     }
-}
-obj.sayhi();
+};
+
+obj.getCompany()
+
+// jab arrow function ke andar this use karte hai to this ka reference parent object ko point karta hai na ki current object ko
+//jab normal function ke andar this use karte hai to this ka reference current object ko point karta hai na ki parent object ko
