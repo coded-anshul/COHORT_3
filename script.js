@@ -560,3 +560,43 @@
 
 //  var out = student1.getIntro.bind(student2,'kolkata');
 //  out();
+
+
+
+// var arr = [1,2,3,4,5]
+// var obj = {
+//     name:'ashu',
+//     age:20,
+//     city:'delhi'
+// }
+
+// console.log(arr.__proto__ );
+// console.log(obj);
+
+
+var college = {
+    name: 'ABC College',
+    rating: 4.5,
+    students: 5000,
+    saySlogan: function() {
+        console.log("Education for all!");
+    }   
+}
+var branch = {
+    name: 'Computer Science',
+    rating: 4.8,
+    students: 2000,
+    subjects: ['Programming', 'Data Structures', 'Algorithms'],
+
+}
+
+var user = {
+    name: 'John Doe',
+    age: 20,
+    marks: 85,
+}
+
+user.__proto__ = branch;
+branch.__proto__ = college;
+
+console.log(user);
