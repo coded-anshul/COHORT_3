@@ -538,21 +538,25 @@
 // getResults.call(student3);
 
 
- var student1 = {
-    firstName: 'John',
-    lastName: 'Doe',
+//  var student1 = {
+//     firstName: 'John',
+//     lastName: 'Doe',
 
-    getIntro: function(city) {
-        console.log(this.firstName + ' ' + this.lastName + ' ' + city);
- }}
+//     getIntro: function(city) {
+//         console.log(this.firstName + ' ' + this.lastName + ' ' + city);
+//  }}
 
-  var student2 = {
-    firstName: 'jane',
-    lastName: 'Smith',
- }
- var student3 = {
-    firstName: 'Alice',
-    lastName: 'Johnson',
- }
+//   var student2 = {
+//     firstName: 'jane',
+//     lastName: 'Smith',
+//  }
+//  var student3 = {
+//     firstName: 'Alice',
+//     lastName: 'Johnson',
+//  }
 
- student1.getIntro.call(student2,'delhi'); // Output: John Doe scored 90 in Maths and 85 in Computer.
+//  student1.getIntro.call(student2,'delhi'); // Output: John Doe scored 90 in Maths and 85 in Computer.
+//  student1.getIntro.apply(student3,['mumbai']); 
+
+//  var out = student1.getIntro.bind(student2,'kolkata');
+//  out();
