@@ -599,4 +599,4 @@ var user = {
 user.__proto__ = branch;
 branch.__proto__ = college;
 
-console.log(user);
+console.log(user.subjects);
