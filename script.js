@@ -430,12 +430,30 @@
 // console.log(sum(1, 2, 3));         
 // console.log(sum(1, 2, 3, 4, 5, 6)); 
 
-let arr = [10, 20, 30];
+// let arr = [10, 20, 30]
+// // Old way
+// let a = arr[0];
+// let b = arr[1];
+// let c = arr[2];
+// // New way
+// let [x, y, z] = arr;
+// console.log(x, y, z);   
+var obj = {
+    name: 'John',
+    age: 30,
+    city: 'New York',
+    sayhi:function(){
+        console.log(this);
+    }
+}
+obj.sayhi();
 
-// Old way
-let a = arr[0];
-let b = arr[1];
-let c = arr[2];
-// New way
-let [x, y, z] = arr;
-console.log(x, y, z);   
+var obj = {
+    name: 'John',
+    age: 30,
+    city: 'New York',
+    sayhi:()=>{
+        console.log(this);
+    }
+}
+obj.sayhi();
