@@ -644,27 +644,43 @@
 
 // s2.showProfile();
 
-class MakeStudent{
-    constructor(fname,lname,contact,isverified){
-        this.fname = fname;
-        this.lname = lname;
-        this.contact = contact;
-        this.isverified = isverified;
-    }
+// class MakeStudent{
+//     constructor(fname,lname,contact,isverified){
+//         this.fname = fname;
+//         this.lname = lname;
+//         this.contact = contact;
+//         this.isverified = isverified;
+//     }
 
-    showProfile = function(){
-        if (this.isverified){
-            console.log(`first name is ${this.fname} last name is ${this.lname} contact is ${this.contact} isverified ${this.isverified}`);
-        } else {
-            console.log("your account is not verified");
-        }
-    }
+//     showProfile = function(){
+//         if (this.isverified){
+//             console.log(`first name is ${this.fname} last name is ${this.lname} contact is ${this.contact} isverified ${this.isverified}`);
+//         } else {
+//             console.log("your account is not verified");
+//         }
+//     }
+// }
+ 
+
+// let s1 = new MakeStudent('ashu','kumar',1234567890,true);
+// let s2 = new MakeStudent('deepak','ojha',1234567890,false);
+// let s3 = new MakeStudent('anurag','kumar',1234567890,true);
+// let s4 = new MakeStudent('deepesh','tak',1234567890,false); 
+
+// console.log(s1);
+
+
+let papa = {
+    fname:'ashu',
+    lname:'kumar',
+    shop:'ashu store',
 }
 
+let beta = {
+    fname:'deepak',
+    lname:'ojha',
+}
 
-let s1 = new MakeStudent('ashu','kumar',1234567890,true);
-let s2 = new MakeStudent('deepak','ojha',1234567890,false);
-let s3 = new MakeStudent('anurag','kumar',1234567890,true);
-let s4 = new MakeStudent('deepesh','tak',1234567890,false); 
+beta.__proto__ = papa;
 
-console.log(s1);
+console.log(beta.shop);
