@@ -600,24 +600,46 @@
 // branch.__proto__ = college;
 
 
-function createBook(title, author, page) {
-    this.title = title;
-    this.author = author;
-    this.page = page;   
-    this.getFrontpage=function() {
-        console.log('Book name -' , this.title);
-        console.log('Author name -' , this.author);
-        console.log('Total pages -' , this.page);
-    }
+// function createBook(title, author, page) {
+//     this.title = title;
+//     this.author = author;
+//     this.page = page;   
+//     this.getFrontpage=function() {
+//         console.log('Book name -' , this.title);
+//         console.log('Author name -' , this.author);
+//         console.log('Total pages -' , this.page);
+//     }
         
+// }
+
+// let book1 = new createBook('book1', 'author1', 100);
+// let book2 = new createBook('book2', 'author2', 200);
+
+
+// // console.log(book1);
+// // console.log(book2);
+
+// book1.getFrontpage();
+
+function MakeStudent(fname,lname,contact,isverified){
+    this.fname = fname;
+    this.lname = lname;
+    this.contact = contact;
+    this.isverified = isverified;
+    this.showProfile = function(){
+        if (this.isverified){
+            console.log(`first name is ${this.fname} last name is ${this.lname} contact is ${this.contact} isverified ${this.isverified}`)
+        }else{
+            console.log("your account is not verified");
+    }
+    }
 }
 
-let book1 = new createBook('book1', 'author1', 100);
-let book2 = new createBook('book2', 'author2', 200);
+
+let s1 = new MakeStudent('ashu','kumar',1234567890,true);
+let s2 = new MakeStudent('deepak','ojha',1234567890,false);
+let s3 = new MakeStudent('anurag','kumar',1234567890,true);
+let s4 = new MakeStudent('deepesh','tak',1234567890,false);
 
 
-// console.log(book1);
-// console.log(book2);
-
-book1.getFrontpage();
-
+s2.showProfile();
