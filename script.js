@@ -669,18 +669,59 @@
 
 // console.log(s1);
 
+// let dada= {
+//     fname:'ram',
+//     lname:'kumar',
+//     land: 'ram land',
+// }
 
-let papa = {
-    fname:'ashu',
-    lname:'kumar',
-    shop:'ashu store',
-}
+// let papa = {
+//     fname:'ashu',
+//     lname:'kumar',
+//     shop:'ashu store',
+// }
+// papa.__proto__ = dada;
 
-let beta = {
-    fname:'deepak',
-    lname:'ojha',
-}
+// let beta = {
+//     fname:'deepak',
+//     lname:'ojha',
+// }
 
-beta.__proto__ = papa;
+// beta.__proto__ = papa;
 
-console.log(beta.shop);
+// console.log(beta.shop);
+// console.log(papa.land);
+// console.log(beta.land); 
+
+
+ class user {
+    constructor(fname,lname){
+        this.fname = fname;
+        this.lname = lname;
+    }
+    greetUser(){
+        console.log(`hello ${this.fname} ${this.lname}`); 
+    }
+ }
+
+ class Admin extends user{
+    constructor(fname,lname){
+        super(fname,lname);
+        this.Accessadmin = true;
+
+    }
+    addCourse(){
+        console.log('course added');
+    }
+    removeCourse(){
+        console.log('course removed');
+    }
+ }
+
+ var a1 = new user('ashu','kumar');
+ var a2 = new Admin('deepak','ojha');
+ a1.greetUser();
+ a2.greetUser();
+ a2.addCourse();
+ a2.removeCourse();
+ a1.addCourse();
