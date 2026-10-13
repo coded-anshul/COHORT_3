@@ -601,14 +601,23 @@
 
 
 function createBook(title, author, page) {
-    this.author = author;
     this.title = title;
+    this.author = author;
     this.page = page;   
+    this.getFrontpage=function() {
+        console.log('Book name -' , this.title);
+        console.log('Author name -' , this.author);
+        console.log('Total pages -' , this.page);
+    }
+        
 }
 
 let book1 = new createBook('book1', 'author1', 100);
 let book2 = new createBook('book2', 'author2', 200);
 
 
-console.log(book1);
-console.log(book2);
+// console.log(book1);
+// console.log(book2);
+
+book1.getFrontpage();
+
