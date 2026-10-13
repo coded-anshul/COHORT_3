@@ -574,29 +574,41 @@
 // console.log(obj);
 
 
-var college = {
-    name: 'ABC College',
-    rating: 4.5,
-    students: 5000,
-    saySlogan: function() {
-        console.log("Education for all!");
-    }   
+// var college = {
+//     name: 'ABC College',
+//     rating: 4.5,
+//     students: 5000,
+//     saySlogan: function() {
+//         console.log("Education for all!");
+//     }   
+// }
+// var branch = {
+//     name: 'Computer Science',
+//     rating: 4.8,
+//     students: 2000,
+//     subjects: ['Programming', 'Data Structures', 'Algorithms'],
+
+// }
+
+// var user = {
+//     name: 'John Doe',
+//     age: 20,
+//     marks: 85,
+// }
+
+// user.__proto__ = branch;
+// branch.__proto__ = college;
+
+
+function createBook(title, author, page) {
+    this.author = author;
+    this.title = title;
+    this.page = page;   
 }
-var branch = {
-    name: 'Computer Science',
-    rating: 4.8,
-    students: 2000,
-    subjects: ['Programming', 'Data Structures', 'Algorithms'],
 
-}
+let book1 = new createBook('book1', 'author1', 100);
+let book2 = new createBook('book2', 'author2', 200);
 
-var user = {
-    name: 'John Doe',
-    age: 20,
-    marks: 85,
-}
 
-user.__proto__ = branch;
-branch.__proto__ = college;
-
-console.log(user.subjects);
+console.log(book1);
+console.log(book2);
