@@ -694,34 +694,45 @@
 // console.log(beta.land); 
 
 
- class user {
-    constructor(fname,lname){
-        this.fname = fname;
-        this.lname = lname;
-    }
-    greetUser(){
-        console.log(`hello ${this.fname} ${this.lname}`); 
-    }
- }
+//  class user {
+//     constructor(fname,lname){
+//         this.fname = fname;
+//         this.lname = lname;
+//     }
+//     greetUser(){
+//         console.log(`hello ${this.fname} ${this.lname}`); 
+//     }
+//  }
 
- class Admin extends user{
-    constructor(fname,lname){
-        super(fname,lname);
-        this.Accessadmin = true;
+//  class Admin extends user{
+//     constructor(fname,lname){
+//         super(fname,lname);
+//         this.Accessadmin = true;
 
-    }
-    addCourse(){
-        console.log('course added');
-    }
-    removeCourse(){
-        console.log('course removed');
-    }
- }
+//     }
+//     addCourse(){
+//         console.log('course added');
+//     }
+//     removeCourse(){
+//         console.log('course removed');
+//     }
+//  }
 
- var a1 = new user('ashu','kumar');
- var a2 = new Admin('deepak','ojha');
- a1.greetUser();
- a2.greetUser();
- a2.addCourse();
- a2.removeCourse();
- a1.addCourse();
+//  var a1 = new user('ashu','kumar');
+//  var a2 = new Admin('deepak','ojha');
+//  a1.greetUser();
+//  a2.greetUser();
+//  a2.addCourse();
+//  a2.removeCourse();
+//  a1.addCourse();
+
+
+  console.log('start');
+
+  
+  setTimeout(function x(){
+      console.log('this is set timeout');
+    },2000);
+    
+  console.log('end');
+    //set timeout is used to run a function after a certain delay
