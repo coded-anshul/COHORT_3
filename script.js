@@ -742,10 +742,21 @@
 //     console.log('hello');
 // });
 
-console.log('start');
+// console.log('start');
 
-setTimeout(function x(){
-    console.log('this is set timeout');
-},0);
+// setTimeout(function x(){
+//     console.log('this is set timeout');
+// },0);
 
-console.log('end');
+// console.log('end');
+
+
+let response = fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+console.log(response);  
+
+// promise
+// -pending
+// -resolved
+// -rejected
+
