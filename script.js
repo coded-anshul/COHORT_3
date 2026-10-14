@@ -727,12 +727,25 @@
 //  a1.addCourse();
 
 
-  console.log('start');
+//   console.log('start');
 
   
-  setTimeout(function x(){
-      console.log('this is set timeout');
-    },2000);
+//   setTimeout(function x(){
+//       console.log('this is set timeout');
+//     },2000);
     
-  console.log('end');
+//   console.log('end');
     //set timeout is used to run a function after a certain delay
+
+
+// document.querySelector('h1').addEventListener('click',function(){
+//     console.log('hello');
+// });
+
+console.log('start');
+
+setTimeout(function x(){
+    console.log('this is set timeout');
+},0);
+
+console.log('end');
