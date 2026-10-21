@@ -769,29 +769,54 @@
 // });
 
 
-let p1 = new Promise(function(resolve,reject){
-    console.log('promise pendaing hai ');
+// let p1 = new Promise(function(resolve,reject){
+//     console.log('promise pendaing hai ');
 
-    let result = false 
+//     let result = false 
 
-    setTimeout(function(){
-        if (result){
-            console.log('Full filled');
+//     setTimeout(function(){
+//         if (result){
+//             console.log('Full filled');
 
-            resolve()
-        }else{
-            console.log('rejected');
-            reject()
-        }
-    },3000)
-})
+//             resolve()
+//         }else{
+//             console.log('rejected');
+//             reject()
+//         }
+//     },3000)
+// })
 
-p1.then(function(){
-    console.log('promise is fullfilled');
-})
-.catch(function(){
-    console.log('promise is rejected');
-})
-.finally(function(){
-    console.log('promise end ');
-})
+// p1.then(function(){
+//     console.log('promise is fullfilled');
+// })
+// .catch(function(){
+//     console.log('promise is rejected');
+// })
+// .finally(function(){
+//     console.log('promise end ');
+// })
+
+function orderFood(){
+    let myOrder = new Promise (function(resolve,reject){
+        console.log('order is coming');
+
+        let orderStatus = false;
+        setTimeout(function(){
+            if (orderStatus){
+                resolve();
+            }else{
+                reject();
+                
+            }
+        },3000)
+    })
+
+    myOrder.then(function(){
+        console.log('bhaiya aaygye hai ');
+    })
+    .catch(function(){
+        console.log("order failed");
+    })
+}
+
+orderFood();
