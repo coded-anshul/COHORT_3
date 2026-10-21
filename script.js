@@ -796,41 +796,54 @@
 //     console.log('promise end ');
 // })
 
-function orderFood(){
-    let myOrder = new Promise (function(resolve,reject){
-        console.log('order is coming');
+// function orderFood(){
+//     let myOrder = new Promise (function(resolve,reject){
+//         console.log('order is coming');
 
-        let orderStatus = true;
-        setTimeout(function(){
-            if (orderStatus){
-                resolve();
-            }else{
-                reject();
+//         let orderStatus = true;
+//         setTimeout(function(){
+//             if (orderStatus){
+//                 resolve();
+//             }else{
+//                 reject();
                 
-            }
-        },3000)
-    })
+//             }
+//         },3000)
+//     })
 
-    myOrder.then(function(){
-        console.log('bhaiya aaygye hai ');
+//     myOrder.then(function(){
+//         console.log('bhaiya aaygye hai ');
         
-        let paymentStatus = false;
-        return new Promise(function (res,rej){
-            setTimeout(function(){
-                if(paymentStatus){
-                    res()
-                }else{
-                    rej()
-                }
-            },2000)
-        })
-    })
-    .then (function(){
-        console.log("nacho");
-    })
-    .catch(function(){
-        console.log("order failed");
-    })
-}
+//         let paymentStatus = false;
+//         return new Promise(function (res,rej){
+//             setTimeout(function(){
+//                 if(paymentStatus){
+//                     res()
+//                 }else{
+//                     rej()
+//                 }
+//             },2000)
+//         })
+//     })
+//     .then (function(){
+//         console.log("nacho");
+//     })
+//     .catch(function(){
+//         console.log("order failed");
+//     })
+// }
 
-orderFood();
+// orderFood();
+
+let response = fetch('https://fakestoreapi.com/products')
+
+response.then(function(){
+    console.log('data aagya ');
+    console.log(data);
+    
+})
+
+.catch(function(){
+    console.log('data nahi aya');
+    
+})
