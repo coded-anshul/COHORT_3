@@ -759,11 +759,39 @@
 
 // dataLao();
 
+// let p1 = new Promise(function(resolve,reject){
+//     let val = true;
+//     if (val){
+//         console.log('this is resolved');
+//     } else {
+//         console.log('this is rejected');
+//     }
+// });
+
+
 let p1 = new Promise(function(resolve,reject){
-    let val = true;
-    if (val){
-        console.log('this is resolved');
-    } else {
-        console.log('this is rejected');
-    }
-});
+    console.log('promise pendaing hai ');
+
+    let result = false 
+
+    setTimeout(function(){
+        if (result){
+            console.log('Full filled');
+
+            resolve()
+        }else{
+            console.log('rejected');
+            reject()
+        }
+    },3000)
+})
+
+p1.then(function(){
+    console.log('promise is fullfilled');
+})
+.catch(function(){
+    console.log('promise is rejected');
+})
+.finally(function(){
+    console.log('promise end ');
+})
