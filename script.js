@@ -751,11 +751,19 @@
 // console.log('end');
 
 
-async function dataLao(){
-    let response =await fetch('https://picsum.photos/v2/list');
-    let data = await response.json();
-    console.log(data);
-}
+// async function dataLao(){
+//     let response =await fetch('https://picsum.photos/v2/list');
+//     let data = await response.json();
+//     console.log(data);
+// }
 
-dataLao();
+// dataLao();
 
+let p1 = new Promise(function(resolve,reject){
+    let val = true;
+    if (val){
+        console.log('this is resolved');
+    } else {
+        console.log('this is rejected');
+    }
+});
