@@ -800,7 +800,7 @@ function orderFood(){
     let myOrder = new Promise (function(resolve,reject){
         console.log('order is coming');
 
-        let orderStatus = false;
+        let orderStatus = true;
         setTimeout(function(){
             if (orderStatus){
                 resolve();
@@ -813,6 +813,20 @@ function orderFood(){
 
     myOrder.then(function(){
         console.log('bhaiya aaygye hai ');
+        
+        let paymentStatus = false;
+        return new Promise(function (res,rej){
+            setTimeout(function(){
+                if(paymentStatus){
+                    res()
+                }else{
+                    rej()
+                }
+            },2000)
+        })
+    })
+    .then (function(){
+        console.log("nacho");
     })
     .catch(function(){
         console.log("order failed");
