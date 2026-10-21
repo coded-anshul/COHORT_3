@@ -751,12 +751,11 @@
 // console.log('end');
 
 
-let response = fetch('https://jsonplaceholder.typicode.com/todos/1');
+async function dataLao(){
+    let response =await fetch('https://picsum.photos/v2/list');
+    let data = await response.json();
+    console.log(data);
+}
 
-console.log(response);  
-
-// promise
-// -pending
-// -resolved
-// -rejected
+dataLao();
 
