@@ -835,15 +835,42 @@
 
 // orderFood();
 
-let response = fetch('https://fakestoreapi.com/products')
+// let response = fetch('https://fakestoreapi.com/products')
 
-response.then(function(){
-    console.log('data aagya ');
-    console.log(data);
+// response.then(function(){
+//     console.log('data aagya ');
+//     console.log(data);
     
-})
+// })
 
-.catch(function(){
-    console.log('data nahi aya');
+// .catch(function(){
+//     console.log('data nahi aya');
     
-})
+// })
+
+// console.log(window.document);
+
+//selection of an element 
+
+
+//only sleects first h1 tag
+// const h1 = document.querySelector('h1');
+
+//for selectin all tags
+// const h1 = document.querySelectorAll('h1');
+// console.log(h1);
+
+
+// const h1 = document.getElementsByTagName('h1');
+// console.log(h1);
+// const box = document.querySelector('#box');
+// box.innerHTML = "hellooooooooo0";
+
+// document.body.innerHTML = "checkinggg";
+
+
+// text change = 
+
+// --- textContent -> 
+// --- innerText ->poora structure ud jayega
+// --- innerHTML -> pooora structure ud jayega
