@@ -871,6 +871,45 @@
 
 // text change = 
 
-// --- textContent -> 
+// --- textContent -> only changes or update text
 // --- innerText ->poora structure ud jayega
 // --- innerHTML -> pooora structure ud jayega
+
+
+//nodelist- sabhi chezo ko node mai count karta hai 
+// sabhi cheeze matlab blank space , white space , line break 
+
+//Html collection - sirf html elemtns
+
+// const body = document.body;
+// console.log(body.childNodes);
+// console.log(body.children);
+
+// const h1 = document.querySelector('h1');
+
+// h1.textContent = "I have been changed by DOM";
+// // console.log(h1);
+
+
+// const isClass = h1.classList.contains('heading');
+// console.log(isClass);
+
+
+// h1.classList.toggle('headingg');
+// h1.classList.toggle('headingg');
+
+const bulb = document.querySelector('.bulb');
+
+const button = document.querySelector("button");
+let flag = true;
+button.addEventListener('click', function(){
+    if (flag){
+        bulb.style.backgroundColor = 'Yellow';
+        button.textContent = 'off';
+        flag = false;
+    }else{
+        bulb.style.backgroundColor = 'white';
+        button.textContent = 'on';
+        flag = true;
+    }
+})
