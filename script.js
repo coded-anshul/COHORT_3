@@ -898,18 +898,69 @@
 // h1.classList.toggle('headingg');
 // h1.classList.toggle('headingg');
 
-const bulb = document.querySelector('.bulb');
+// const bulb = document.querySelector('.bulb');
 
-const button = document.querySelector("button");
-let flag = true;
-button.addEventListener('click', function(){
-    if (flag){
-        bulb.style.backgroundColor = 'Yellow';
-        button.textContent = 'off';
-        flag = false;
-    }else{
-        bulb.style.backgroundColor = 'white';
-        button.textContent = 'on';
-        flag = true;
-    }
-})
+// const button = document.querySelector("button");
+// let flag = true;
+// button.addEventListener('click', function(){
+//     if (flag){
+//         bulb.style.backgroundColor = 'Yellow';
+//         button.textContent = 'off';
+//         flag = false;
+//     }else{
+//         bulb.style.backgroundColor = 'white';
+//         button.textContent = 'on';
+//         flag = true;
+//     }
+// })
+
+// attributes and properties 
+// -set attributes , getAttribute , removeAtribute , hasAttribute
+// - with data -* name 
+// - Input . value(property , current state ) vs input . getattribute ('value')
+
+// const h3 = document.querySelector('#id1');
+
+// let res = h3.getAttribute("class");
+// h3.setAttribute("width","200");
+
+// console.log(h3.getAttribute("width") );
+// h3.removeAttribute("width");
+
+// console.log(res);
+
+// console.log(h3.hasAttribute("width"));
+
+// const userCard = document.querySelector("#user_card");
+// console.log(userCard.getAttribute("data-user-id"));
+
+// userCard.dataset.userId = "678";
+
+// console.log(userCard.getAttribute("data-user-id"));
+
+// const inp = document.querySelector("input");
+// const btn = document.querySelector("button");
+
+
+
+// btn.addEventListener("click", function(){
+//     console.log(inp.value);
+// })
+
+
+//creating inserting and removing elemetns from dom 
+
+
+// const main = document.querySelector("main");
+// let footer = document.createElement("footer");
+// const span = document.createElement("span");
+
+// span.innerHTML = "hey i am <i>dynamic</i>"
+
+
+// main.append(footer,span);
+
+
+// main.removeChild(span);
+
+// main.insertBefore
