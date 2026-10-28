@@ -6,6 +6,10 @@
 html, body{
     height: 100%;
     width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* main{
     height: 100%;
@@ -216,7 +220,7 @@ footer{
     --king:red;
     --queen:pink;
 } */
-main{
+/* main{
     height: 100%;
     width: 100%;
     display: flex;
@@ -224,9 +228,9 @@ main{
     gap: 20px;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.bulb{
+/* .bulb{
     height: 400px;
     width: 400px;
     border-radius: 50%;
@@ -240,4 +244,67 @@ button{
     background-color: blue;
     border-radius: 20px ;
     border: none;
+} */
+
+main{
+    height: 60%;
+    width: 60%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#Add{
+    padding: 10px 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+.li{
+    display: flex;
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 300;
+}
+.btn{
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.edit{
+    background-color: yellow;
+    color: white;
+}
+.del{
+    background-color: red;
+    color: white;
 }
