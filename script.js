@@ -996,16 +996,16 @@ const body = document.body;
 
 btn.addEventListener("click",function(events){
     console.log("button trigggered");
-},true); 
+}); 
 
 div.addEventListener("click",function(events){
     console.log("div trigggered");
-},true) ;
+}) ;
 
 main.addEventListener("click",function(events){
     console.log("main trigggered");
-},true);
+});
 
 body.addEventListener("click",function(events){
     console.log("body trigggered");
-},true);
+});
