@@ -989,23 +989,132 @@
 
 
 
-const btn = document.querySelector("button");
-const div = document.querySelector("div");
-const main = document.querySelector("main");
-const body = document.body;
+// const btn = document.querySelector("button");
+// const div = document.querySelector("div");
+// const main = document.querySelector("main");
+// const body = document.body;
 
-btn.addEventListener("click",function(events){
-    console.log("button trigggered");
-}); 
+// btn.addEventListener("click",function(events){
+//     console.log("button trigggered");
+// }); 
 
-div.addEventListener("click",function(events){
-    console.log("div trigggered");
-}) ;
+// div.addEventListener("click",function(events){
+//     console.log("div trigggered");
+// }) ;
 
-main.addEventListener("click",function(events){
-    console.log("main trigggered");
+// main.addEventListener("click",function(events){
+//     console.log("main trigggered");
+// });
+
+// body.addEventListener("click",function(events){
+//     console.log("body trigggered");
+// });
+
+
+// const form = document.querySelector("form");
+// const name = document.querySelector("#name");
+// const email = document.querySelector("#email");
+
+
+
+
+
+// form.addEventListener("submit",function(events){
+//     events.preventDefault();
+//     console.log("form events");
+//     console.log(events.target[0].value);
+//     console.log(events.target[1].value);
+
+// })
+
+const form = document.querySelector("form");
+const inp1 = document.querySelector("#name");
+const inp2 = document.querySelector("#email");
+const users = document.querySelector(".users");
+const url = document.querySelector("#url");
+
+let usersData = [
+  {
+    id: 1,
+    name: "Aarav Sharma",
+    email: "aarav.sharma@example.com",
+    image: "https://randomuser.me/api/portraits/men/11.jpg",
+    dob: "1998-04-15",
+  },
+  {
+    id: 2,
+    name: "Priya Verma",
+    email: "priya.verma@example.com",
+    image: "https://randomuser.me/api/portraits/women/22.jpg",
+    dob: "1996-09-28",
+  },
+  {
+    id: 3,
+    name: "Rohan Mehta",
+    email: "rohan.mehta@example.com",
+    image: "https://randomuser.me/api/portraits/men/35.jpg",
+    dob: "2000-01-12",
+  },
+  {
+    id: 4,
+    name: "Sneha Kapoor",
+    email: "sneha.kapoor@example.com",
+    image: "https://randomuser.me/api/portraits/women/48.jpg",
+    dob: "1997-07-03",
+  },
+  {
+    id: 5,
+    name: "Karan Malhotra",
+    email: "karan.malhotra@example.com",
+    image: "https://randomuser.me/api/portraits/men/59.jpg",
+    dob: "1995-12-19",
+  },
+];
+
+const ui = () => {
+  users.innerHTML = "";
+  usersData.forEach((elem, index) => {
+    users.innerHTML += `<div class="user_card">
+              <div class="img_box">
+                <img
+                  src="${elem.image}"
+                  alt="image here"
+                />
+              </div>
+              <div class="text">
+                <h3>Name - ${elem.name}</h3>
+                <p>Email - ${elem.email}</p>
+              </div>
+              <div class="actions">
+          <button id="edit">Edit</button>
+          <button onclick="deleteCard(${index})" id="del">Delete</button>
+        </div>
+            </div>`;  
+  });
+};
+
+ui();
+
+form.addEventListener("submit", (events) => {
+  events.preventDefault();
+  let name = inp1.value;
+  let email = inp2.value;
+  let image = url.value;
+
+  if (name.trim() === "" && email.trim() === "" && image.trim() === "") return;
+
+  usersData.push({
+    name,
+    email,
+    image,
+  });
+
+  ui();
+
+  form.reset();
 });
 
-body.addEventListener("click",function(events){
-    console.log("body trigggered");
-});
+let deleteCard = (index) => {
+  usersData.splice(index, 1)
+  ui();
+};
