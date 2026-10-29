@@ -966,23 +966,46 @@
 // main.insertBefore
 
 
-const inp = document.querySelector("input");
-const btn = document.querySelector("#add");
-const todoBox = document.querySelector(".todo-list")
-btn.addEventListener("click", function(){
-    const value = inp.value;
+// const inp = document.querySelector("input");
+// const btn = document.querySelector("#add");
+// const todoBox = document.querySelector(".todo-list")
+// btn.addEventListener("click", function(){
+//     const value = inp.value;
 
-    if(value.trim() === "") return;
-    todoBox.innerHTML += `<div class="li">
-                <h3>${value}</h3>
-                <div>
-                    <button  class="btn edit">
-                        Edit
-                    </button>
-                    <button class="btn del">
-                        Delete
-                    </button>
-                </div>
-            </div>`;
-            inp.value = "";
-})
+//     if(value.trim() === "") return;
+//     todoBox.innerHTML += `<div class="li">
+//                 <h3>${value}</h3>
+//                 <div>
+//                     <button  class="btn edit">
+//                         Edit
+//                     </button>
+//                     <button class="btn del">
+//                         Delete
+//                     </button>
+//                 </div>
+//             </div>`;
+//             inp.value = "";
+// })
+
+
+
+const btn = document.querySelector("button");
+const div = document.querySelector("div");
+const main = document.querySelector("main");
+const body = document.body;
+
+btn.addEventListener("click",function(events){
+    console.log("button trigggered");
+},true); 
+
+div.addEventListener("click",function(events){
+    console.log("div trigggered");
+},true) ;
+
+main.addEventListener("click",function(events){
+    console.log("main trigggered");
+},true);
+
+body.addEventListener("click",function(events){
+    console.log("body trigggered");
+},true);
