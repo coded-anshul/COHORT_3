@@ -1131,60 +1131,147 @@
 // floor- zameen
 // ceil - chhat
 
-const main = document.querySelector("main");
-const btn = document.querySelector("button");
-const overlay = document.querySelector("#overlay");
-const timer = document.querySelector("#timer");
-const box = document.createElement("div");
-const scoree = document.querySelector("#score");
-box.classList.add("box");
+// const main = document.querySelector("main");
+// const btn = document.querySelector("button");
+// const overlay = document.querySelector("#overlay");
+// const timer = document.querySelector("#timer");
+// const box = document.createElement("div");
+// const scoree = document.querySelector("#score");
+// box.classList.add("box");
 
-let interval;
-let time = 0 ;
-let score = 0;
+// let interval;
+// let time = 0 ;
+// let score = 0;
 
-const randomColor = () => {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  return box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+// const randomColor = () => {
+//   let r = Math.floor(Math.random() * 256);
+//   let g = Math.floor(Math.random() * 256);
+//   let b = Math.floor(Math.random() * 256);
+//   return box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 
 
-}
+// }
 
-const randomBox = () => {
-  randomColor();
-  main.append(box);
+// const randomBox = () => {
+//   randomColor();
+//   main.append(box);
   
-  let mainH = main.clientHeight - box.offsetHeight;
-  let mainW = main.clientWidth - box.offsetWidth;
+//   let mainH = main.clientHeight - box.offsetHeight;
+//   let mainW = main.clientWidth - box.offsetWidth;
 
 
-    const y = Math.random()*mainH;
-    const x = Math.random()*mainW;
+//     const y = Math.random()*mainH;
+//     const x = Math.random()*mainW;
 
-    box.style.top = `${y}px`;
-    box.style.left = `${x}px`;
+//     box.style.top = `${y}px`;
+//     box.style.left = `${x}px`;
+//   }
+
+// btn.addEventListener("click", function () {
+// randomBox();
+// clearInterval(interval);
+
+//   interval = setInterval(function () {
+//    randomBox();
+//     time += 1;
+//    timer.textContent = time;
+//   },1000);
+
+//   setTimeout(function () {
+//     clearInterval(interval);
+//     overlay.style.display = "flex";
+//   }, 10000);
+// });
+
+// box.addEventListener("click", function () {
+//   score += 1;
+//   scoree.textContent = score;
+  
+// });
+
+const create = document.querySelector("#create");
+const form = document.querySelector(".form");
+const close = document.querySelector(".close");
+const from = document.querySelector("form");
+const products = document.querySelector(".products");
+const productsArr = [];
+let updateIndex = null;
+
+
+let ui = () => {productsArr.forEach((elem,index) => {
+  products.innerHTML = "";
+    products.innerHTML += `<div class="product-card">
+                <div class="img">
+                    <img src="https://imgs.search.brave.com/O8uQ4uYZNel09SRcYjfdveJRjhOL0h-6cIlnocIZ4EI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzA5LzgyLzI2/LzM2MF9GXzIwOTgy/MjY0NF9idFFWM1A2/dFM3WGN5eVNSS2JF/WVlSemJKTVlNZldp/Ni5qcGc" alt="">
+                </div>
+                
+
+                <div class="text">
+                <h2>${elem.name}</h2>
+                <p>${elem.description}</p>
+                <p>$${elem.price}</p>
+                </div>
+                <div class="btns">
+                <button id="update" onclick="updateProduct('${elem.name}')">Update</button>
+                <button id="delete" onclick="deleteProduct('${index}')">Delete</button>
+                </div>
+            </div>`;
+  });
+};
+
+
+create.addEventListener("click", function () {
+  form.style.display = "flex";
+});
+
+close.addEventListener("click", function () {
+  form.style.display = "none";
+});
+
+from.addEventListener("submit", function (events) {
+  events.preventDefault();
+  let name = events.target[0].value;
+  let description = events.target[1].value;
+  let price = events.target[2].value;
+  let image = events.target[3].value;
+
+  if (name.trim() === "" && description.trim() === "" && price.trim() === "" && image.trim() === ""){
+    alert("please fill all the fields");
+    return;
   }
 
-btn.addEventListener("click", function () {
-randomBox();
-clearInterval(interval);
+  let obj = {
+    name,
+    description,
+    price,
+    image,
+  };
+if (updateIndex !== null) {
+    productsArr[updateIndex] = obj;
+    updateIndex = null;
+  }else{
+    productsArr.push(obj);
+  }
+ 
 
-  interval = setInterval(function () {
-   randomBox();
-    time += 1;
-   timer.textContent = time;
-  },1000);
-
-  setTimeout(function () {
-    clearInterval(interval);
-    overlay.style.display = "flex";
-  }, 10000);
+  productsArr.push(obj);
+  ui();
+  form.style.display = "none";
+  from.reset();
 });
 
-box.addEventListener("click", function () {
-  score += 1;
-  scoree.textContent = score;
-  
-});
+
+const updateProduct = (name) => {
+  form.style.display = "flex";
+  let product = productsArr.find((elem) => elem.name === name);
+  updateIndex = productsArr.findIndex((elem) => elem.name === name);
+  form[0].value = product.name;
+  form[1].value = product.description;
+  form[2].value = product.price;
+  form[3].value = product.image;
+};
+
+const deleteProduct = (index) => {
+  productsArr.splice(index, 1);
+  ui();
+}
