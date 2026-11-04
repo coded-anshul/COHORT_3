@@ -1275,3 +1275,34 @@ const deleteProduct = (index) => {
   productsArr.splice(index, 1);
   ui();
 }
+
+
+// localStorage.setItem("name", "ashu");
+// localStorage.setItem("age", "20");
+
+// let lsd = localStorage.getItem("name");
+// let age = localStorage.getItem("age");
+// console.log(lsd,age);
+
+
+// let data = [{
+//   name: "ashu",
+//   age: 12,
+//   address: "delhi",
+// },{
+//   name: "deepak",
+//   age: 15,
+//   address: "mumbai",
+// },{
+//   name: "anurag",
+//   age: 20,
+//   address: "kolkata",
+// }];
+
+// let stringed = JSON.stringify(data); //javascript object notation to string
+// localStorage.setItem("data", stringed);
+ 
+// const retrievedData = localStorage.getItem("data");
+// const parsedData = JSON.parse(retrievedData);
+// console.log(parsedData);
+
