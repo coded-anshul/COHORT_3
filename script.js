@@ -1189,83 +1189,102 @@
   
 // });
 
-const create = document.querySelector("#create");
-const form = document.querySelector(".form");
-const close = document.querySelector(".close");
-const from = document.querySelector("form");
-const products = document.querySelector(".products");
-const productsArr = [];
+const createBtn = document.querySelector("#create");
+const formDiv = document.querySelector(".form");
+const closeBtn = document.querySelector("#close");
+
+const productDiv = document.querySelector(".products");
+
+const form = document.querySelector("form");
+
+const productsArr = JSON.parse(localStorage.getItem("products")) || [];
+console.log(productsArr);
+
 let updateIndex = null;
 
+let ui = () => {
+  productDiv.innerHTML = "";
+  productsArr.forEach((elem, index) => {
+    productDiv.innerHTML += `<div class="product-card">
+          <div class="img">
+            <img
+              src="${elem.image}"
+              alt=""
+            />
+          </div>
 
-let ui = () => {productsArr.forEach((elem,index) => {
-  products.innerHTML = "";
-    products.innerHTML += `<div class="product-card">
-                <div class="img">
-                    <img src="https://imgs.search.brave.com/O8uQ4uYZNel09SRcYjfdveJRjhOL0h-6cIlnocIZ4EI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzA5LzgyLzI2/LzM2MF9GXzIwOTgy/MjY0NF9idFFWM1A2/dFM3WGN5eVNSS2JF/WVlSemJKTVlNZldp/Ni5qcGc" alt="">
-                </div>
-                
+          <div class="text">
+            <h3>${elem.productName}</h3>
+            <p>${elem.description}</p>
+            <p>${elem.price}</p>
+          </div>
 
-                <div class="text">
-                <h2>${elem.name}</h2>
-                <p>${elem.description}</p>
-                <p>$${elem.price}</p>
-                </div>
-                <div class="btns">
-                <button id="update" onclick="updateProduct('${elem.name}')">Update</button>
-                <button id="delete" onclick="deleteProduct('${index}')">Delete</button>
-                </div>
-            </div>`;
+          <div class="btns">
+            <button onclick="updateProduct('${elem.productName}')" id="update">Update</button>
+            <button onclick="deleteProduct(${index})" id="delete">Delete</button>
+          </div>
+        </div>`;
   });
 };
 
+ui();
 
-create.addEventListener("click", function () {
-  form.style.display = "flex";
+createBtn.addEventListener("click", () => {
+  formDiv.style.display = "flex";
 });
 
-close.addEventListener("click", function () {
-  form.style.display = "none";
+closeBtn.addEventListener("click", () => {
+  formDiv.style.display = "none";
 });
 
-from.addEventListener("submit", function (events) {
-  events.preventDefault();
-  let name = events.target[0].value;
-  let description = events.target[1].value;
-  let price = events.target[2].value;
-  let image = events.target[3].value;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  if (name.trim() === "" && description.trim() === "" && price.trim() === "" && image.trim() === ""){
+  let productName = event.target[0].value;
+  let description = event.target[1].value;
+  let price = event.target[2].value;
+  let image = event.target[3].value;
+
+  if (
+    productName.trim() === "" ||
+    description.trim() === "" ||
+    price.trim() === "" ||
+    image === ""
+  ) {
     alert("please fill all the fields");
     return;
   }
 
   let obj = {
-    name,
+    productName,
     description,
     price,
     image,
   };
-if (updateIndex !== null) {
+
+  if (updateIndex !== null) {
     productsArr[updateIndex] = obj;
     updateIndex = null;
-  }else{
+    localStorage.setItem("products", JSON.stringify(productsArr));
+  } else {
     productsArr.push(obj);
+    localStorage.setItem("products", JSON.stringify(productsArr));
   }
- 
 
-  productsArr.push(obj);
   ui();
-  form.style.display = "none";
-  from.reset();
+  console.log(productsArr);
+
+  form.reset();
+
+  formDiv.style.display = "none";
 });
 
-
 const updateProduct = (name) => {
-  form.style.display = "flex";
-  let product = productsArr.find((elem) => elem.name === name);
-  updateIndex = productsArr.findIndex((elem) => elem.name === name);
-  form[0].value = product.name;
+  formDiv.style.display = "flex";
+  let product = productsArr.find((elem) => elem.productName === name);
+  updateIndex = productsArr.findIndex((elem) => elem.productName === name);
+
+  form[0].value = product.productName;
   form[1].value = product.description;
   form[2].value = product.price;
   form[3].value = product.image;
@@ -1273,9 +1292,50 @@ const updateProduct = (name) => {
 
 const deleteProduct = (index) => {
   productsArr.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(productsArr));
   ui();
-}
+};
 
+// localStorage.setItem("name", "Nitin gadkari");
+
+// localStorage.setItem("song", "tera mera khatam");
+
+// let lsd = localStorage.getItem("name");
+
+// let song = localStorage.getItem("song");
+// console.log(lsd);
+// console.log("song->", song);
+
+// let data = [
+//   {
+//     name: "piyush",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Aryan kelvin",
+//     age: 69,
+//     address: "saket nagar",
+//     pincode: 462022,
+//   },
+//   {
+//     name: "Bhuvan bam",
+//     age: 69,
+//     address: "Mumbai",
+//     pincode: 462022,
+//   },
+// ];
+
+// let newData = ["polo"];
+
+// localStorage.setItem("fam-people", JSON.stringify(data));
+
+// const lsd = localStorage.getItem("fam-people");
+
+// let value = JSON.parse(lsd);
+
+// console.log(value);
 
 // localStorage.setItem("name", "ashu");
 // localStorage.setItem("age", "20");
